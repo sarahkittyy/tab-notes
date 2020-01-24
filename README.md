@@ -1,6 +1,11 @@
 # tab-notes
 
-Take notes on your New Tab page!
+Super minimal note-taking app in your new tab page.
+
+## Features
+
+* Persistent on closing / re-opening your browser
+* Toggleable, persistent dark & light theme
 
 ## Manual Installation
 
@@ -9,3 +14,7 @@ Take notes on your New Tab page!
 3. Head to [chrome://extensions](chrome://extensions).
 4. In the top-right, enable developer mode.
 5. Click 'Load Unpacked' and select the folder you previously extracted.
+
+## TODO
+
+* Configuration
