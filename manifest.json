@@ -1,6 +1,6 @@
 {
 	"name": "TabNotes",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Take notes on your newtab page.",
 	"manifest_version": 2,
 	"permissions": ["storage"],
