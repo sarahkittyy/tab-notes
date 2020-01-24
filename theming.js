@@ -1,17 +1,13 @@
 (function () {
 
-var $area;
+var $themed;
 var $themeButton;
-var $svg;
 
 /**
  * @brief Set the active theme
  */
 const setTheme = (mode) => {
-	const f = e => e.setAttribute('theme', mode);
-	f($area);
-	f($themeButton);
-	f($svg);
+	$themed.forEach($e => $e.setAttribute('theme', mode));
 	saveTheme();
 };
 
@@ -19,7 +15,7 @@ const setTheme = (mode) => {
  * @brief Get the active theme
  */
 const getTheme = () => {
-	return $area.getAttribute('theme');
+	return $themed.item(0).getAttribute('theme');
 };
 
 /**
@@ -64,8 +60,7 @@ const saveTheme = () => {
  */
 const onReady = () => {
 	$themeButton = document.querySelector('#theme-button');
-	$area = document.querySelector('#notes-area');
-	$svg = document.querySelector('#theme-button-svg');
+	$themed = document.querySelectorAll('[themed]');
 	
 	loadTheme(onLoaded);
 }
