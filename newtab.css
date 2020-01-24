@@ -1,8 +1,8 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background: #eee;
 	height: 100%;
+	overflow: hidden;
 }
 
 #notes-area {
@@ -10,6 +10,22 @@ html, body {
 	padding: 20px;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 	font-family: 'Source Code Pro';
 	font-size: 22px;
+	z-index: -1;
+}
+
+#notes-area[theme="dark"] {
+	background-color: #222;
+	color: #eee;
+}
+
+#notes-area[theme="light"] {
+	background-color: #eee;
+	color: #222;
+}
+
+#color-bottom {
+
 }
