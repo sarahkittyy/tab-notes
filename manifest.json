@@ -1,0 +1,10 @@
+{
+	"name": "TabNotes",
+	"version": "0.1.0",
+	"description": "Take notes on your newtab page.",
+	"manifest_version": 2,
+	"permissions": ["storage"],
+	"chrome_url_overrides": {
+		"newtab": "newtab.html"
+	}
+}
