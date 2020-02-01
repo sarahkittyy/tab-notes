@@ -30,6 +30,7 @@ html, body {
 	padding: 5px;
 	outline: none;
 	border: none;
+	border-top-left-radius: 8px;
 }
 
 .button[theme="dark"] {
