@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="newtab.css">
 	<script src="newtab.js"></script>
 	<script src="theming.js"></script>
+	<script src="panel.js"></script>
 </head>
 <body>
 	<textarea themed theme="dark" placeholder="enter ur notes here" id="notes-area"></textarea>
-	<button class="above float-tr button" id="theme-button">
+	<button class="above fix-tr button slideout" id="theme-button">
 		<svg id="theme-button-svg" themed theme="dark" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
 			<g>
 			</g>
@@ -24,6 +25,15 @@
 			<path d="M346.276 385.423l76.524 33.639-36.741-73.442z" />
 			<path d="M168.499 388.199l-76.493 33.639 36.72-73.442z" />
 			<path d="M388.199 168.499l33.618-76.513-73.4 36.751z" />
+		</svg>
+	</button>
+	<div class="panel slideout" id="side-panel" themed theme="dark"></div>
+	<button themed theme="dark" class="fix-br button above slideout" id="panel-toggle">
+		<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+			themed theme="dark" id="panel-toggle-svg"
+			viewBox="0 0 24 24">
+			<path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z">
+			</path>
 		</svg>
 	</button>
 </body>

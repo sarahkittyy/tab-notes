@@ -30,11 +30,36 @@ html, body {
 	padding: 5px;
 	outline: none;
 	border: none;
-	background-color: inherit;
+}
+
+.button[theme="dark"] {
+	background-color: #eee;
+}
+
+.button[theme="light"] {
+	background-color: #222;
 }
 
 .button:hover {
 	cursor: pointer;
+}
+
+#theme-button {
+	transition-property: right;
+	transition-duration: 0.5s;
+	background-color: inherit;
+	top: 5px;
+	right: 5px;
+}
+
+#theme-button:hover {
+	cursor: pointer;
+}
+
+#theme-button[slideout] {
+	transition-property: right;
+	transition-duration: 0.5s;
+	right: 10%;
 }
 
 #theme-button-svg {
@@ -52,12 +77,74 @@ html, body {
 	stroke: #222;
 }
 
+#panel-toggle {
+	transition-property: right;
+	transition-duration: 0.5s;
+}
+
+#panel-toggle[slideout] {
+	transition-property: right;
+	transition-duration: 0.5s;
+	right: 10%;
+}
+
+#panel-toggle-svg {
+	width: 48px;
+	height: 48px;
+}
+
+#panel-toggle-svg[theme="dark"] {
+	fill: #222;
+	stroke: #eee;
+}
+
+#panel-toggle-svg[theme="light"] {
+	fill: #eee;
+	stroke: #222;
+}
+
 .above {
 	z-index: 1;
 }
 
-.float-tr {
+.fix-tr {
 	position: fixed;
-	top: 10px;
-	right: 10px;
+	top: 0px;
+	right: 0px;
+}
+
+.fix-br {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
+
+.panel {
+	transition-property: right, visibility;
+	transition-duration: 0.5s;
+	width: 10%;
+	position: fixed;
+	top: 0px;
+	right: -10%; 
+	visibility: hidden;
+	z-index: 5;
+	height: 100%;
+	border-left: 2px solid;
+}
+
+.panel[slideout] {
+	right: 0px;
+	visibility: visible;
+	transition-property: right, visibility;
+	transition-duration: 0.5s;
+}
+
+.panel[theme="light"] {
+	background-color: #222;
+	border-left-color: #eee;
+}
+
+.panel[theme="dark"] {
+	background-color: #eee;
+	border-left-color: #222;
 }
