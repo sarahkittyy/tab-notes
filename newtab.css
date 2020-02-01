@@ -30,26 +30,14 @@ html, body {
 	padding: 5px;
 	outline: none;
 	border: none;
-	background-color: inherit;
 }
 
-.button-invbg {
-	padding: 5px;
-	outline: none;
-	border: none;
-	background-color: inherit;
-}
-
-.button-invbg[theme="dark"] {
+.button[theme="dark"] {
 	background-color: #eee;
 }
 
-.button-invbg[theme="light"] {
+.button[theme="light"] {
 	background-color: #222;
-}
-
-.button-invbg:hover {
-	cursor: pointer;
 }
 
 .button:hover {
@@ -59,6 +47,13 @@ html, body {
 #theme-button {
 	transition-property: right;
 	transition-duration: 0.5s;
+	background-color: inherit;
+	top: 5px;
+	right: 5px;
+}
+
+#theme-button:hover {
+	cursor: pointer;
 }
 
 #theme-button[slideout] {
@@ -82,6 +77,17 @@ html, body {
 	stroke: #222;
 }
 
+#panel-toggle {
+	transition-property: right;
+	transition-duration: 0.5s;
+}
+
+#panel-toggle[slideout] {
+	transition-property: right;
+	transition-duration: 0.5s;
+	right: 10%;
+}
+
 #panel-toggle-svg {
 	width: 48px;
 	height: 48px;
@@ -97,25 +103,14 @@ html, body {
 	stroke: #222;
 }
 
-#panel-toggle {
-	transition-property: right;
-	transition-duration: 0.5s;
-}
-
-#panel-toggle[slideout] {
-	transition-property: right;
-	transition-duration: 0.5s;
-	right: 10%;
-}
-
 .above {
 	z-index: 1;
 }
 
-.float-tr {
+.fix-tr {
 	position: fixed;
-	top: 10px;
-	right: 10px;
+	top: 0px;
+	right: 0px;
 }
 
 .fix-br {
