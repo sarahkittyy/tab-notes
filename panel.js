@@ -35,14 +35,28 @@ const saveConfig = () => {
 };
 
 /**
+ * @brief Close the drawer, if it's open
+ */
+const closeDrawer = () => {
+	$slideables.forEach($e => $e.removeAttribute('slideout'));
+}
+
+/**
+ * @brief Open the drawer, even if it's already opoen
+ */
+const openDrawer = () => {
+	$slideables.forEach($e => $e.setAttribute('slideout', ''));
+};
+
+/**
  * @brief Toggle the drawer open
  */
 const toggleDrawer = () => {
 	if ($panel.hasAttribute('slideout')) {
-		$slideables.forEach($e => $e.removeAttribute('slideout'));
+		closeDrawer();
 	}
 	else {
-		$slideables.forEach($e => $e.setAttribute('slideout', ''));
+		openDrawer();
 	}
 };
 	
@@ -51,6 +65,11 @@ const toggleDrawer = () => {
  */
 const onLoaded = () => {
 	$panelToggle.addEventListener('click', toggleDrawer);
+	document.addEventListener('keyup', (e) => {
+		if(e.key === 'Escape') {
+			closeDrawer();
+		}
+	});
 };
 
 /**
