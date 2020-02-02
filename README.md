@@ -9,7 +9,7 @@ Super minimal note-taking app in your new tab page.
 
 ## Manual Installation
 
-1. [Download this repository as a zip.](https://github.com/sarahkittyy/tab-notes/archive/master.zip)
+1. [Download this repository as a zip.](https://github.com/sarahkittyy/tab-notes/archive/v1.0.0.zip)
 2. Extract it.
 3. Head to [chrome://extensions](chrome://extensions).
 4. In the top-right, enable developer mode.
