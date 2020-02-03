@@ -104,6 +104,34 @@ html, body {
 	stroke: #222;
 }
 
+.panel-button {
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+	font-size: 24px;
+	outline: none;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+	border-bottom: 2px solid;
+}
+
+.panel-button[theme="dark"] {
+	color: #222;
+}
+
+.panel-button[theme="light"] {
+	color: #eee;
+}
+
+.panel-button:hover {
+	filter: invert(0.1);
+}
+
+.panel-button:active {
+	filter: invert(0.2);
+}
+
 .above {
 	z-index: 1;
 }
